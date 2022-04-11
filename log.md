@@ -1,4 +1,4 @@
-according to the output of the cmd, we should install the pillow, but the error occurs:
+According to the output of the cmd, we should install the pillow, but the error occurs:
 ```
 C:\python_package\Pillow-9.1.0>python setup.py install
 running install
@@ -114,6 +114,10 @@ Please see the install instructions at:
    https://pillow.readthedocs.io/en/latest/installation.html
 ```
 
+To solve the problem, I download and install the zlib, which is a compression tool for modern multi-core machines written in Go.
+
+It does not work.
+
 then visit the [instructions](https://pillow.readthedocs.io/en/latest/installation.html)
 
 > zlib provides access to compressed PNGs
@@ -132,4 +136,23 @@ then visit the [instructions](https://pillow.readthedocs.io/en/latest/installati
 > Operating system Tested Python versions Latest tested Pillow version Tested processors
 > Windows 7 Professional 3.7 7.0.0 x86,x86-64
 
-considering that the version tested is 7, so have a try
+Considering that the version tested is 7, so have a try.
+Unluckily, it still fails.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
