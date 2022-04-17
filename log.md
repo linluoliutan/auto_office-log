@@ -656,8 +656,42 @@ Try again, to help remember things day before yesterday.
    
 - It seems that we return the position where we come across. So I begin to read the code of Pillow by vscode.
    
-   
-   
+### 0415
+- Xw Z suggests that Python Virtual Environment or exe can be used to avoid dependency of environment.
+- I try to install it by pip online.
+
+### 0416
+- opencv fails. And i do not want to install huge VS!
+![image](https://user-images.githubusercontent.com/58795434/163668537-c7199fbc-3260-49aa-aec5-7da4fc6c0dcd.png)
+
+   ```
+     ******************************************************************************
+   **
+     scikit-build could not get a working generator for your system. Aborting build
+   .
+
+     Building windows wheels for Python 3.7 requires Microsoft Visual Studio 2022.
+     Get it with "Visual Studio 2017":
+
+       https://visualstudio.microsoft.com/vs/
+
+     Or with "Visual Studio 2019":
+
+       https://visualstudio.microsoft.com/vs/
+
+     Or with "Visual Studio 2022":
+
+       https://visualstudio.microsoft.com/vs/
+
+     ******************************************************************************
+   **
+     ----------------------------------------
+     ERROR: Failed building wheel for opencv-python
+     Running setup.py clean for opencv-python
+   Failed to build opencv-python
+   ERROR: Could not build wheels for opencv-python which use PEP 517 and cannot be
+   installed directly
+   ```
    
    
    
