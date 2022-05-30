@@ -692,13 +692,43 @@ Try again, to help remember things day before yesterday.
    ERROR: Could not build wheels for opencv-python which use PEP 517 and cannot be
    installed directly
    ```
+
+#0528
+
+- i try to use locateOnScreen, but:
+[pyautogui.PyAutoGUIException: PyAutoGUI was unable to import pyscreeze.](https://debugah.com/solved-pyautogui-pyautoguiexception-pyautogui-was-unable-to-import-pyscreeze-22587/#:~:text=%E2%80%9CPyAutoGUI%20was%20unable%20to%20import%20pyscreeze.%20%28This%20is,call.%E2%80%9D%20pyautogui.PyAutoGUIException%3A%20PyAutoGUI%20was%20unable%20to%20import%20pyscreeze.)
    
-   
-   
+- After thinking for serveral hours , i test the same function in my vm, which can concludes that it is due to problem of installation. So i uninstall the python in working environment, install again, and copy the files in site-packages. It really works. The function alert and locateOnScreen can work well, but the confidence of locateOnScreen should be import by opencv.
+- **Opencv**： i download it in my vm, but i shows that:
+   ```
+   WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by ‘ProxyError(‘Cannot connect to proxy.’, OSError(0, ‘Error’))’
+   ```
+it is solved by changing source:
+   ```
+   pip install 包名 -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
+   ```
+- **wheel**: but it still fails:
+   ```
+   ERROR: Could not build wheels for opencv-python which use PEP 517 and cannot be installed directly
+   ```
+some blogs use conda, but it is too large to download.
+according to the [blog](https://blog.csdn.net/ilovejohnny/article/details/121031935), i combine updating pip and changing source:
+   ```
+   pip install --upgrade pip setuptools wheel -i ...
+   ```
+it works.
 
+- then i come across another problem:
+   ```
+   ERROR: Could not install packages due to an EnvironmentError: [WinError 5] 拒绝 访问。: 'C:\\Users\\segfault\\AppData\\Local\\Temp\\pip-uninstall-vdgt2im6\\pip.
+   ```
+it can be sovled by adding --user in the end of the command.
 
-
-
+- **The program of auto stamp print**:
+   add alert module
+   looking for names and "print" button by opencv
+   reduce the lines of code from 500 to less 100 by using for loop
+   output the log
 
 
 
